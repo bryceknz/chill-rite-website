@@ -23,8 +23,6 @@ import {
   Visibility,
 } from 'semantic-ui-react'
 
-import SEO from '../components/seo'
-
 // Heads up!
 // We using React Static to prerender our docs with server side rendering, this is a quite simple solution.
 // For more advanced usage please check Responsive docs under the "Usage" section.
@@ -42,7 +40,7 @@ const HomepageHeading = ({ mobile }) => (
   <Container text>
     <Header
       as='h1'
-      content='Imagine-a-Company'
+      content='Chill-Rite Refrigeration & Air-Conditioning Limited'
       inverted
       style={{
         fontSize: mobile ? '2em' : '4em',
@@ -53,7 +51,7 @@ const HomepageHeading = ({ mobile }) => (
     />
     <Header
       as='h2'
-      content='Do whatever you want when you want to.'
+      content='We do it right the first time.'
       inverted
       style={{
         fontSize: mobile ? '1.5em' : '1.7em',
@@ -62,7 +60,7 @@ const HomepageHeading = ({ mobile }) => (
       }}
     />
     <Button primary size='huge'>
-      Get Started
+      Contact us now
       <Icon name='right arrow' />
     </Button>
   </Container>
@@ -110,15 +108,12 @@ class DesktopContainer extends Component {
                 <Menu.Item as='a' active>
                   Home
                 </Menu.Item>
-                <Menu.Item as='a'>Work</Menu.Item>
-                <Menu.Item as='a'>Company</Menu.Item>
+                <Menu.Item as='a'>Services</Menu.Item>
+                <Menu.Item as='a'>About Us</Menu.Item>
                 <Menu.Item as='a'>Careers</Menu.Item>
                 <Menu.Item position='right'>
-                  <Button as='a' inverted={!fixed}>
-                    Log in
-                  </Button>
                   <Button as='a' inverted={!fixed} primary={fixed} style={{ marginLeft: '0.5em' }}>
-                    Sign Up
+                    Contact Us
                   </Button>
                 </Menu.Item>
               </Container>
@@ -219,35 +214,39 @@ ResponsiveContainer.propTypes = {
   children: PropTypes.node,
 }
 
-const Layout = () => (
+const Layout = ({ children }) => (
   <ResponsiveContainer>
-    <SEO title="Home" />
+    <main>{children}</main>
     <Segment style={{ padding: '8em 0em' }} vertical>
       <Grid container stackable verticalAlign='middle'>
         <Grid.Row>
           <Grid.Column width={8}>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Help Companies and Companions
+              What We Stand For
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              We can give your company superpowers to do things that they never thought possible.
-              Let us delight your customers and empower your needs... through pure data analytics.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis mi in urna rutrum pharetra.
+              Aenean rutrum nisl sed mi sagittis, vitae pretium leo rhoncus. Nulla facilisi. Sed id eros.
             </p>
             <Header as='h3' style={{ fontSize: '2em' }}>
-              We Make Bananas That Can Dance
+              Why You Should Choose Us
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              Yes that's right, you thought it was the stuff of dreams, but even bananas can be
-              bioengineered.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum augue ac mauris hendrerit condimentum.
+              Vivamus ac tempus orci. Donec scelerisque sed magna eu ullamcorper.
             </p>
           </Grid.Column>
           <Grid.Column floated='right' width={6}>
-            <Image bordered rounded size='large' src='/images/wireframe/white-image.png' />
+            <Image bordered rounded
+              size='large'
+              alt='Chill-Rite team'
+              src='/images/wireframe/white-image.png'
+            />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
           <Grid.Column textAlign='center'>
-            <Button size='huge'>Check Them Out</Button>
+            <Button size='huge'>Services</Button>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -267,8 +266,11 @@ const Layout = () => (
               "I shouldn't have gone with their competitor."
             </Header>
             <p style={{ fontSize: '1.33em' }}>
-              <Image avatar src='/images/avatar/large/nan.jpg' />
-              <b>Nan</b> Chief Fun Officer Acme Toys
+              <Image avatar
+                alt='Joe Bloggs'
+                src='/images/avatar/large/nan.jpg'
+              />
+              <b>Joe</b> <i>Chief Fun Officer</i> Acme Toys
             </p>
           </Grid.Column>
         </Grid.Row>
@@ -320,18 +322,21 @@ const Layout = () => (
               <Header inverted as='h4' content='About' />
               <List link inverted>
                 <List.Item as='a'>Sitemap</List.Item>
+                <List.Item as='a'>About Us</List.Item>
+                <List.Item as='a'>Careers</List.Item>
                 <List.Item as='a'>Contact Us</List.Item>
-                <List.Item as='a'>Religious Ceremonies</List.Item>
-                <List.Item as='a'>Gazebo Plans</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={3}>
               <Header inverted as='h4' content='Services' />
               <List link inverted>
-                <List.Item as='a'>Banana Pre-Order</List.Item>
-                <List.Item as='a'>DNA FAQ</List.Item>
-                <List.Item as='a'>How To Access</List.Item>
-                <List.Item as='a'>Favorite X-Men</List.Item>
+                <List.Item as='a'>Commercial</List.Item>
+                <List.Item as='a'>Industrial</List.Item>
+                <List.Item as='a'>Marine</List.Item>
+                <List.Item as='a'>Heat Pump</List.Item>
+                <List.Item as='a'>Air Conditioning</List.Item>
+                <List.Item as='a'>Transport</List.Item>
+                <List.Item as='a'>Programmed Maintenance</List.Item>
               </List>
             </Grid.Column>
             <Grid.Column width={7}>
