@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Chill-Rite Refrigeration & Air-Conditioning Limited`,
+    description: `We provide 24 hours services Auckland wide. We do it right the first time. We take pride in what we do and we are very prompt with time. We do: Commercial, Marine, Heat Pump, Air Conditioning, Transport, Programmed Maintenance.`,
+    author: `Bryce Kehoe`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
